@@ -47,3 +47,11 @@ https://github.com/vcow/lib-signal-bus.git#1.0.0
 }
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if you want to install exactly 1.0.0 version.
+
+### To install SignalBusExtensions
+1. From Unity package.<br/>Select latest release from the https://github.com/vcow/lib-signal-bus/releases and download **signal-bus.unitypackage** from Assets section.
+
+3. From Git URL.<br/>Go to **Package Manager**, press **+** in the top left of window and select **Install package from git URL**. Enter the URL below:
+```
+https://github.com/vcow/lib-signal-bus.git#upm-extensions
+```
