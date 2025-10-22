@@ -1,0 +1,14 @@
+{
+  "name": "com.vcow.signal-bus-extensions",
+  "version": "1.0.0",
+  "displayName": "Signal Bus Extensions",
+  "description": "Multithread Signal Bus for Unity/C#.",
+  "unity": "2019.4",
+  "dependencies": {
+    "com.vcow.signal-bus": "https://github.com/vcow/lib-signal-bus#upm"
+  },
+  "author": {
+    "name": "vcow",
+    "email": "virtualcow@gmail.com"
+  }
+}
