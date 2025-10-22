@@ -1,0 +1,17 @@
+{
+    "name": "com.vcow.signal-bus-extensions",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4f0e882a327821d4aad7898d535cd3a9",
+        "GUID:77221876cc6b8244180b96e320b1bcd4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
