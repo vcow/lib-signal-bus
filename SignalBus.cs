@@ -97,7 +97,7 @@ namespace Plugins.vcow.SignalBus
 		{
 			if (_isDisposed != 0)
 			{
-				throw new ObjectDisposedException(GetType().FullName);
+				return;
 			}
 
 			lock (_lock)
