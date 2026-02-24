@@ -24,6 +24,7 @@ namespace Plugins.vcow.SignalBus
 		private readonly object _lock = new();
 #endif
 		private readonly Dictionary<Type, HashSet<object>> _handlers = new();
+		private readonly List<object> _handlersBuffer = new(32);
 
 		public SignalBus()
 		{
@@ -152,9 +153,17 @@ namespace Plugins.vcow.SignalBus
 				if (_handlers.TryGetValue(typeof(T), out var handlers))
 				{
 					result = handlers.Count;
-					foreach (var handler in handlers.Cast<Action<T>>())
+					try
 					{
-						handler.Invoke(signal);
+						_handlersBuffer.AddRange(handlers);
+						foreach (var handler in _handlersBuffer.Cast<Action<T>>())
+						{
+							handler.Invoke(signal);
+						}
+					}
+					finally
+					{
+						_handlersBuffer.Clear();
 					}
 				}
 				else

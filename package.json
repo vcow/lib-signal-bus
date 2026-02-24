@@ -1,6 +1,6 @@
 {
   "name": "com.vcow.signal-bus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Signal Bus",
   "description": "Multithread Signal Bus for Unity/C#.",
   "unity": "2019.4",
