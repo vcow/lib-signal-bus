@@ -134,6 +134,32 @@ namespace Plugins.vcow.SignalBus
 			}
 		}
 
+		public bool IsDisposed => _isDisposed != 0;
+
+		public bool TryFire<T>(out int result) where T : new()
+		{
+			if (_isDisposed != 0)
+			{
+				result = 0;
+				return false;
+			}
+
+			result = Fire(new T());
+			return true;
+		}
+
+		public bool TryFire<T>(T signal, out int result)
+		{
+			if (_isDisposed != 0)
+			{
+				result = 0;
+				return false;
+			}
+
+			result = Fire(signal);
+			return true;
+		}
+
 		public int Fire<T>() where T : new()
 		{
 			return Fire(new T());
